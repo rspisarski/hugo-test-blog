@@ -1,0 +1,13 @@
+<header class="header">
+    <div class="header__row row">
+        <a class="header__logo" href="/">#Richard Pisarski<span>.web-developer</span></a>
+        <nav class="header__nav">
+            <ul class="header__nav__menu">
+                {{ range $item := .Site.Menus.main }}
+                <li class="header__nav__menu__item"><a class="header__nav__menu__item__link" href="{{ $item.URL }}">.{{
+                        $item.Name }}</a></li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</header>
